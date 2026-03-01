@@ -12,7 +12,7 @@
             <h2 class="display-6 link-body-emphasis mb-3">{{$read->title}}</h2>
             <p class="card-text"><small class="text-muted">Posted: {{Carbon\Carbon::parse($read->created_at)->locale('id')->isoFormat('dddd, D MMMM Y')}}</small></p>
             
-                <img src="{{asset('storage/'.$read->image)}}" alt="" class="card border shadow w-100">
+                <img src="{{asset('public/storage/'.$read->image)}}" alt="" class="card border shadow w-100">
             
            <p class="mt-5">
               {!! $read->content !!}
@@ -22,7 +22,7 @@
 
         <div class="col-md-4 ">
           <div class="position-sticky" style="top: 2rem">            
-              <img src="{{asset('storage/'.$sambutan->image)}}" alt="" class="w-100 card shadow border">
+              <img src="{{asset('public/storage/'.$sambutan->image)}}" alt="" class="w-100 card shadow border">
            
             <div>
                 <br>
@@ -34,7 +34,7 @@
                 <li>
      <a class="d-flex flex-row flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
      href="{{route('read',$item->slug)}}">
-     <img src="{{asset('storage/'.$item->image)}}" alt="" class="bd-placeholder-img "
+     <img src="{{asset('public/storage/'.$item->image)}}" alt="" class="bd-placeholder-img "
                       height="96"  width="100">
                    
                     <div class="col-lg-8">

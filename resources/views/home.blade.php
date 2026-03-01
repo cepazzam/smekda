@@ -19,7 +19,7 @@
               <a href="" class="text-body-secondary position-absolute top-0 start-0 z-3 ms-5 mt-2">
               <span class="badge bg-dark shadow mb-3">Selengkapnya Profil Sekolah</span>
               </a>
-              <img src="{{asset('storage/'.$utama->image)}}" class="card-img card shadow" alt="">
+              <img src="{{asset('public/storage/'.$utama->image)}}" class="card-img card shadow" alt="">
              
             
             
@@ -28,7 +28,7 @@
           <div class="col card">
             <span class="badge bg-dark shadow border col-3 my-3">Guru Menulis</span>
             <div class="d-flex py-3">
-              <img src="{{asset('storage/'.$artikel->image)}}" alt="smekda"  class="me-4 p-2 border img-resposive" width="200">
+              <img src="{{asset('public/storage/'.$artikel->image)}}" alt="smekda"  class="me-4 p-2 border img-resposive" width="200">
               <article class="pe-3">
                 <h5>{{$artikel->title}}</h5>
                 {!! Str::words($artikel->content,60,'...')!!}

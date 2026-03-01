@@ -23,7 +23,7 @@
              <span class="badge bg-info text-light d-block mb-2">{{$post->category->name}}</span>
             <span class="badge bg-warning text-light d-block mb-2">{{$post->position}}</span>
                   </div>
-            <img src="{{ asset('storage/'.$post->image)}}"  class="bd-placeholder-img card-img-top" height="120">
+            <img src="{{ asset('public/storage/'.$post->image)}}"  class="bd-placeholder-img card-img-top" height="120">
            
                   
                   <h6 class="card-text p-2">

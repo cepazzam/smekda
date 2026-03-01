@@ -32,7 +32,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-flex justify-content-center align-items-center">
-                        <img src="{{asset('storage/'. App\Models\Sekolah::first()->logo)}}" alt="" width="200">
+                        <img src="{{asset('public/storage/'. App\Models\Sekolah::first()->logo)}}" alt="" width="200">
                     </div>
                     <div class="col-lg-7">
                         <div class="p-5">

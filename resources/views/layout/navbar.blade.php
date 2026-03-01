@@ -3,10 +3,10 @@
   <div class="container d-flex justify-content-between align-items-center px-3">
   <small class="text-light"><i class="fa fa-envelope"></i>  {{$skl->email}} - <i class="fa fa-phone"></i> {{$skl->telp_fax}}</small>
   <div class="d-flex gap-3 ">
-     <a href="{{$skl->urlyt}}"><img src="{{asset('storage/'.$skl->logoyt)}}"  alt="" width="25"></a>
-     <a href="{{$skl->urlig}}" target="_blank"><img src="{{asset('storage/'.$skl->logoig)}}"  alt="" width="25"></a>
-     <a href="{{$skl->urltiktok}}" target="_blank"><img src="{{asset('storage/'.$skl->logotiktok)}}"  alt="" width="25"></a>
-     <a href="{{$skl->urlfb}}" target="_blank"><img src="{{asset('storage/'.$skl->logofb)}}"  alt="" width="25"></a>
+     <a href="{{$skl->urlyt}}"><img src="{{asset('public/storage/'.$skl->logoyt)}}"  alt="" width="25"></a>
+     <a href="{{$skl->urlig}}" target="_blank"><img src="{{asset('public/storage/'.$skl->logoig)}}"  alt="" width="25"></a>
+     <a href="{{$skl->urltiktok}}" target="_blank"><img src="{{asset('public/storage/'.$skl->logotiktok)}}"  alt="" width="25"></a>
+     <a href="{{$skl->urlfb}}" target="_blank"><img src="{{asset('public/storage/'.$skl->logofb)}}"  alt="" width="25"></a>
 
   </div>
   </div>
@@ -18,7 +18,7 @@
       >
         <div class="container py-2">
           <div>
-            <img src="{{asset('storage/'.$skl->logo)}}" class="me-2" alt="smkn2 pwk" width="30">
+            <img src="{{asset('public/storage/'.$skl->logo)}}" class="me-2" alt="smkn2 pwk" width="30">
           <a class="navbar-brand fs-5 shadow" href="#">{{$skl->nm_skl}}</a>
           </div>
           <button

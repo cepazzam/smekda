@@ -19,7 +19,7 @@
              @foreach($photos as $photo)
               <div class="col-md-2 px-2">
               <div class="card shadow-sm">
-            <img src="{{ asset('storage/'.$photo->image)}}"  class="bd-placeholder-img card-img-top" height="120">
+            <img src="{{ asset('public/storage/'.$photo->image)}}"  class="bd-placeholder-img card-img-top" height="120">
            
                   
                   <p class="card-text p-2">

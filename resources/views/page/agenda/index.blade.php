@@ -50,7 +50,7 @@
         </div>
         <div class="col-md-4 py-5">
             <div class="card border-0 outline-0  position-sticky" style="top: 8rem">                
-              <img src="{{asset('storage/'.$harian->image)}}" alt="" class="w-100 card shadow border">
+              <img src="{{asset('public/storage/'.$harian->image)}}" alt="" class="w-100 card shadow border">
            
             </div>
 

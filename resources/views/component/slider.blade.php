@@ -25,7 +25,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" class="">
-            <img src="{{asset('storage/'.$slideractive->image)}}" alt="">
+            <img src="{{asset('public/storage/'.$slideractive->image)}}" alt="">
             <div class="container">
               <div class="carousel-caption text-end">
                 <h1>{{$slideractive->title}}</h1>
@@ -41,7 +41,7 @@
           @foreach ($slider as $item)             
        
           <div class="carousel-item">
-            <img src="{{asset('storage/'.$item->image)}}" alt="" class="">
+            <img src="{{asset('public/storage/'.$item->image)}}" alt="" class="">
             <div class="container">
               <div class="carousel-caption text-start">
                 <h1>{{$item->title}}</h1>

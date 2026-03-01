@@ -7,7 +7,7 @@
     <div class="col-md-6 py-3">
               <span class="badge bg-dark shadow mb-2">Utama</span>
 
-      <img src="{{asset('storage/'.$utama->image)}}" class="img-fluid rounded-start" alt="...">
+      <img src="{{asset('public/storage/'.$utama->image)}}" class="img-fluid rounded-start" alt="...">
       <small class="text-italic">Foto: smkn 2 purwakarta/dok-foto</small>
     </div>
     <div class="col-md-6">

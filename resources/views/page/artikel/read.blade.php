@@ -15,7 +15,7 @@
             
             
            <p class="mt-5">
-            <img src="{{asset('storage/'.$artikel->image)}}" alt="" class="card border shadow w-25 float-start me-3">
+            <img src="{{asset('public/storage/'.$artikel->image)}}" alt="" class="card border shadow w-25 float-start me-3">
 
               {!! $artikel->content !!}
             </p>

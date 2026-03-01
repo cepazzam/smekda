@@ -7,7 +7,7 @@
           <div class="col">
             <div
               class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              style="background-image: url({{asset('storage/'.$item->image)}})"
+              style="background-image: url({{asset('public/storage/'.$item->image)}})"
             >
               <div
                 class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
@@ -19,7 +19,7 @@
                   
                      <li class="me-auto">
                     <img
-                      src="{{asset('storage/'.$skl->logo)}}"
+                      src="{{asset('public/storage/'.$skl->logo)}}"
                       alt="Bootstrap"
                       width="32"
                       height="32"
