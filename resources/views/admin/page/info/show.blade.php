@@ -7,7 +7,7 @@
         
         <div class="row">
             <div class="col-auto">
-                <img class="img-fluid" src="{{asset('storage/'.$info->image)}}" alt="Photo" style="max-height: 160px;">
+                <img class="img-fluid" src="{{asset('public/storage/'.$info->image)}}" alt="Photo" style="max-height: 160px;">
             </div>
             <div class="col px-4">
                 <div>

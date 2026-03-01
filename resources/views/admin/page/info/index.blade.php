@@ -31,7 +31,7 @@
                         
                     
                     <tr>
-                        <td><img src="{{asset('storage/'.$item->image)}}" alt="" width="60"></td>
+                        <td><img src="{{asset('public/storage/'.$item->image)}}" alt="" width="60"></td>
                         <td>{{$item->title}}</td>
                         <td>{!!Str::limit($item->content,'50',('...'))!!}</td>
                         <td>
