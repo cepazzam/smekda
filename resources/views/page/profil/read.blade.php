@@ -9,7 +9,7 @@
                 <h5 class="mb-3 p-3 bg-secondary rounded-3 text-center text-light">{{$profil->title}}</h5>
                 @else
                 <h5 class="mb-3 p-3 bg-secondary rounded-3 text-center text-light">{{$profil->title}}</h5>
-                <img src="{{asset('storage/'.$profil->image)}}" alt="" class="card w-50 mx-auto">
+                <img src="{{asset('public/storage/'.$profil->image)}}" alt="" class="card w-50 mx-auto">
                 @endif
                 <p class="mt-3">
                     {!! $profil->content!!}

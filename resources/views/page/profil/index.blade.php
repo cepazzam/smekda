@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card border p-5">
                 <h5 class="mb-3 p-3 bg-secondary rounded-3 text-center text-light">{{$profil->title}}</h5>
-                <img src="{{asset('storage/'.$profil->image)}}" alt="" class="card w-50">
+                <img src="{{asset('public/storage/'.$profil->image)}}" alt="" class="card w-50">
 
             </div>
             <p class="mt-3">
