@@ -11,7 +11,7 @@
                   <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                     href="{{route('read',$item->slug)}}"
                   >
-                   <img src="{{asset('public/storage/'.$item->image)}}" alt="{{$item->title}}" width="100" height="100">
+                   <img src="{{asset('storage/'.$item->image)}}" alt="{{$item->title}}" width="100" height="100">
                     <div class="col-lg-8">
                       <h6 class="mb-0">{{$item->title}}</h6>
                       <small class="text-body-secondary"

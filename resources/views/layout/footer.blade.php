@@ -5,17 +5,17 @@
           <div class="col-12 col-md-5 mb-3">
             
             <ul style="list-style:none;line-height:35px">
-              <li class="d-flex w-75 gap-2 justify-content-center align-items-center rounded-pill bg-info text-light"> <img src="{{asset('public/storage/'.$skl->logo)}}" class="me-2" alt="smkn2 pwk" width="25" height="30"> <p class="fw-bold"> SMKN 2 PURWAKARTA</p></li>
+              <li class="d-flex w-75 gap-2 justify-content-center align-items-center rounded-pill bg-info text-light"> <img src="{{asset('storage/'.$skl->logo)}}" class="me-2" alt="smkn2 pwk" width="25" height="30"> <p class="fw-bold"> SMKN 2 PURWAKARTA</p></li>
               
               <li> {{$skl->alamat}}</li>
               <li>Kode Pos :  {{$skl->pos}} - Telp/Fax :  {{$skl->telp_fax}}</li>
               <li>Email:  {{$skl->email}}</li>
               <li>Website :  {{$skl->website}}</li>
               <li class="d-flex gap-3">
-                <a href="{{$skl->urlyt}}" target="_blank"><img src="{{asset('public/storage/'.$skl->logoyt)}}"  alt="" width="25"></a>
-                <a href="{{$skl->urlig}}" target="_blank"><img src="{{asset('public/storage/'.$skl->logoig)}}"  alt="" width="25"></a>
-                <a href="{{$skl->urltiktok}}" target="_blank"><img src="{{asset('public/storage/'.$skl->logotiktok)}}"  alt="" width="25"></a>
-                <a href="{{$skl->urlfb}}" target="_blank"><img src="{{asset('public/storage/'.$skl->logofb)}}"  alt="" width="25"></a>
+                <a href="{{$skl->urlyt}}" target="_blank"><img src="{{asset('storage/'.$skl->logoyt)}}"  alt="" width="25"></a>
+                <a href="{{$skl->urlig}}" target="_blank"><img src="{{asset('storage/'.$skl->logoig)}}"  alt="" width="25"></a>
+                <a href="{{$skl->urltiktok}}" target="_blank"><img src="{{asset('storage/'.$skl->logotiktok)}}"  alt="" width="25"></a>
+                <a href="{{$skl->urlfb}}" target="_blank"><img src="{{asset('storage/'.$skl->logofb)}}"  alt="" width="25"></a>
               </li>              
             </ul> 
          

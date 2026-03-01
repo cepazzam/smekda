@@ -3,7 +3,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <img src="{{asset('public/storage/'.$skl->logo)}}" alt="" width="30">
+                    <img src="{{asset('storage/'.$skl->logo)}}" alt="" width="30">
                 </div>
                 <div class="sidebar-brand-text mx-3">{{$skl->nm_skl}}</div>
             </a>

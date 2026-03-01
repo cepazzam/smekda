@@ -89,7 +89,7 @@
             <div class="form-group">
               <label for="judulBerita">Logo Sekolah</label>
              <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logo">
-              <img src="{{asset('public/storage/'.$skl->logo)}}" alt="" width="20"> update logo sekolah
+              <img src="{{asset('storage/'.$skl->logo)}}" alt="" width="20"> update logo sekolah
              </button>
              
             </div>              
@@ -98,7 +98,7 @@
             <div class="form-group">
               <label for="judulBerita">Logo Facebook</label>
              <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logofb">
-            <img src="{{asset('public/storage/'.$skl->logofb)}}" alt="" width="20"> update logo facebook
+            <img src="{{asset('storage/'.$skl->logofb)}}" alt="" width="20"> update logo facebook
 
              </button>
              
@@ -108,7 +108,7 @@
             <div class="form-group">
               <label for="judulBerita">Logo Tiktok</label>
              <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logotiktok">
-            <img src="{{asset('public/storage/'.$skl->logotiktok)}}" alt="" width="20"> update logo tiktok
+            <img src="{{asset('storage/'.$skl->logotiktok)}}" alt="" width="20"> update logo tiktok
 
              </button>
              
@@ -118,7 +118,7 @@
             <div class="form-group">
               <label for="judulBerita">Logo Instagram</label>
              <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logoig">
-            <img src="{{asset('public/storage/'.$skl->logoig)}}" alt="" width="20"> update logo instagram
+            <img src="{{asset('storage/'.$skl->logoig)}}" alt="" width="20"> update logo instagram
 
              </button>
              
@@ -129,7 +129,7 @@
             <div class="form-group">
               <label for="judulBerita">Logo Youtube</label>
              <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logoyt">
-            <img src="{{asset('public/storage/'.$skl->logoyt)}}" alt="" width="20"> update logo youtube
+            <img src="{{asset('storage/'.$skl->logoyt)}}" alt="" width="20"> update logo youtube
 
              </button>
              

@@ -41,7 +41,7 @@
             @endsession
                         <div class="row">
                             <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                                <img src="{{asset('public/storage/'. App\Models\Sekolah::first()->logo)}}" width="200" alt="">
+                                <img src="{{asset('storage/'. App\Models\Sekolah::first()->logo)}}" width="200" alt="">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">

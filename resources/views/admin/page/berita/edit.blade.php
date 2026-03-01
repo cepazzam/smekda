@@ -61,7 +61,7 @@
           <div class="form-group col-md-4">
             <label for="exampleInputFile">Image</label>
                       <div class="input-group">
-                          <img class="me-2" src="{{ asset('public/storage/'.$post->image)}}" width="100" alt="">
+                          <img class="me-2" src="{{ asset('storage/'.$post->image)}}" width="100" alt="">
                         <div class="custom-file">
                           <input type="file" class="form-control btn btn-info" id="exampleInputFile" name="image">
                         </div>
