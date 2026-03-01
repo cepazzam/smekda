@@ -1,4 +1,6 @@
-      <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+    
+
+      <div id="myCarousel" class="carousel slide mb-2" data-bs-ride="carousel" >
         <div class="carousel-indicators">
           <button
             type="button"
@@ -22,88 +24,38 @@
           ></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <div class="container">
-              <div class="carousel-caption text-start">
-                <h1>Example headline.</h1>
-                <p class="opacity-75">
-                  Some representative placeholder content for the first slide of
-                  the carousel.
-                </p>
-                <p>
-                  <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>
-                  Some representative placeholder content for the second slide
-                  of the carousel.
-                </p>
-                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-            </svg>
+          <div class="carousel-item active" class="">
+            <img src="{{asset('storage/'.$slideractive->image)}}" alt="">
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>One more for good measure.</h1>
+                <h1>{{$slideractive->title}}</h1>
                 <p>
-                  Some representative placeholder content for the third slide of
-                  this carousel.
+                 {!! Str::words($slideractive->content,20,'...')!!}
                 </p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+                  <a class="btn btn-xs btn-dark" href="{{route('read',$slideractive->slug)}}">Selengkapnya</a>
                 </p>
               </div>
             </div>
           </div>
+          @foreach ($slider as $item)             
+       
+          <div class="carousel-item">
+            <img src="{{asset('storage/'.$item->image)}}" alt="" class="">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>{{$item->title}}</h1>
+                <p>
+                {!! Str::words($item->content,20,'...')!!}
+                </p>
+                <p>
+                  <a class="btn btn-xs btn-dark" href="{{route('read',$item->slug)}}">Selengkapnya</a>
+                </p>
+              </div>
+            </div>
+          </div>
+         @endforeach
+          
         </div>
         <button
           class="carousel-control-prev"

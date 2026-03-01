@@ -19,13 +19,28 @@
       @method('PUT')
       <div class="card-body">
         <div class="row">
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-6">
           <label for="judulBerita">Judul</label>
           <input type="text" name="title" class="form-control" value="{{ $slider->title}}">
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-3">
           <label for="judulBerita">Gambar</label>
           <input type="file" name="image" class="form-control">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="judulBerita">Text Position</label>
+          <select name="textpos" class="form-control">
+            @if($slider->textpos == 'text-start')
+            <option value="{{$slider->textpos}}" selected>Kiri</option>
+            @elseif($slider->textpos == 'text-center')
+            <option value="{{$slider->textpos}}" selected>Tengah</option>
+            @else
+            <option value="text-end" selected>Kanan</option>
+            @endif
+            <option value="text-start">Kiri</option>
+            <option value="text-center">Tengah</option>
+            <option value="text-end">Kanan</option>
+          </select>
         </div>
       </div>
         

@@ -37,7 +37,26 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">WEBSITE</h6>
                         <a class="collapse-item" href="{{route('userlist')}}">Akun User</a>
-                        <a class="collapse-item" href="{{route('data-sekolah')}}">Sekolah</a>
+                        <a class="collapse-item" href="{{route('data-sekolah')}}">Identitas Sekolah</a>
+                        <a class="collapse-item" href="#">Website</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDua"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>INFORMASI PUBLIK</span>
+                </a>
+                <div id="collapseDua" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">PUBLIC</h6>
+                        <a class="collapse-item" href="{{route('list-info','profil')}}">Profil Sekolah</a>
+                        <a class="collapse-item" href="{{route('list-info','sambutan')}}">Sambutan</a>
+                        <a class="collapse-item" href="{{route('list-info','pengumuman')}}">Pengumuman</a>
+                         <a class="collapse-item" href="{{route('list-info','artikel')}}">Artikel</a>
+
                     </div>
                 </div>
             </li>
@@ -56,9 +75,9 @@
                         <a class="collapse-item" href="{{route('post.index')}}">Berita</a>
                         <a class="collapse-item" href="{{route('agenda.index')}}">Agenda</a>
                         <a class="collapse-item" href="{{route('slider.index')}}">Slider</a>
-                        <a class="collapse-item" href="utilities-animation.html">Galeri</a>
-                        <a class="collapse-item" href="utilities-animation.html">Video</a>
-                        <a class="collapse-item" href="utilities-other.html">Pengumuman</a>
+                        <a class="collapse-item" href="{{route('photo.index')}}">Galeri</a>
+                        <a class="collapse-item" href="{{route('video.index')}}">Video</a>
+                        <a class="collapse-item" href="{{route('widget.index')}}">Widget</a>
                     </div>
                 </div>
             </li>
@@ -96,13 +115,6 @@
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>PRANALA LUAR</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>SOSIAL MEDIA</span></a>
             </li>
 
             <!-- Divider -->

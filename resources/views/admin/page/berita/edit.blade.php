@@ -23,14 +23,11 @@
           <input type="text" name="title" class="form-control" value="{{ $post->title}}">
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="form-group">
               <div class="d-flex justify-content-between">
               <label>Kategori</label>
-              <div>
-              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-listcategory"><i class="fas fa-minus-circle"></i> del</button>
-              <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-default"><i class="fas fa-plus-circle"></i> add</button>
-                </div>
+              
             </div>
 
                 <select class="form-control select2bs4" style="width: 100%;" name="category_id">
@@ -47,16 +44,31 @@
              
             </div>
           </div>
-          <div class="form-group col-md-6">
+           <div class="form-group col-md-4">
+            <label for="exampleInputFile">News Position</label>
+                      <div class="input-group">
+                       <select name="position" id="" class="form-control">
+                                               
+                       <option value="{{$post->position}}" selected>{{'News'.$post->position}}</option>
+                        <option value="slider">News Slider</option>
+                        <option value="headline">News Headline</option>
+                        <option value="latest">News Latest</option>
+
+                       </select>
+                      </div>
+          
+          </div>
+          <div class="form-group col-md-4">
             <label for="exampleInputFile">Image</label>
                       <div class="input-group">
-                          <img src="{{ asset('storage/'.$post->image)}}" width="100" alt="">
+                          <img class="me-2" src="{{ asset('storage/'.$post->image)}}" width="100" alt="">
                         <div class="custom-file">
                           <input type="file" class="form-control btn btn-info" id="exampleInputFile" name="image">
                         </div>
                       </div>
           
           </div>
+          
         
         </div>
       <div class="row">

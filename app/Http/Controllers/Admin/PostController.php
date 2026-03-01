@@ -20,7 +20,7 @@ class PostController extends Controller
     {
         //
 
-        $posts = Post::leftJoin('categories','posts.category_id','=','categories.id')->get();
+        $posts = Post::latest()->paginate(10);
         $title = "Berita";
         return view('admin.page.berita.index', compact('title', 'posts'));
     }
@@ -58,6 +58,7 @@ class PostController extends Controller
             'title' => $request->input('title'),
             'slug' => Str::slug($request->input('title'), '-'),
             'category_id' => $request->input('category_id'),
+            'position' => $request->input('position'),
             'content' => $request->input('content')
 
         ]);
@@ -113,6 +114,7 @@ class PostController extends Controller
                 'title' => $request->input('title'),
                 'slug' => Str::slug($request->input('title'), '-'),
                 'category_id' => $request->input('category_id'),
+                'position' => $request->input('position'),
                 'content' => $request->input('content')
             ]);
         } else {
@@ -125,6 +127,7 @@ class PostController extends Controller
                 'title' => $request->title,
                 'slug' => Str::slug($request->title, '-'),
                 'category_id' => $request->category_id,
+                'position' => $request->position,
                 'content' => $request->content
                 
             ]);
@@ -145,6 +148,7 @@ class PostController extends Controller
                 'title' => $request->title,
                 'slug' => Str::slug($request->title, '-'),
                 'category_id' => $request->category_id,
+                'position' => $request->position,
                 'content' => $request->content
                 
             ]);
@@ -156,6 +160,12 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
+    public function delcategory(String $id){
+       $category = DB::table('categories')->where('id',$id)->delete();
+              return redirect()->route('post.index')->with('info', 'Posted Udated successfully');
+
+    }
     public function destroy(Post $post)
     {
   

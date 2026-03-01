@@ -12,9 +12,10 @@
           <form action="{{route('category.store')}}" method="POST">
             @csrf
             <div class="form-group">
-            <label for="name">Input New Category</label>
+            <label for="name">Category Name</label>
             <input type="text" name="name" class="form-control" required>
             </div>
+            
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

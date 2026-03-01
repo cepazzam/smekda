@@ -10,16 +10,17 @@
         </div>
         <div class="modal-body">
 
-            <table>
-                <thead>
-                    <tr><th>Category Name</th><th>ACtion</th></tr>
-                </thead>
-                <tbody>
+            
                     @foreach ($categories as $category)
-                    <tr><td><span class="btn btn-outline-success btn-block">{{$category->id}}{{$category->name}}</span> </td><td><a href="" onclick="return confirm('yakin menghapus')"><i class="fas fa-trash"></i>delete</a></td></tr>
+                    <div class="d-flex justify-content-between align-items-center my-1 px-5 border-bottom">
+                    <p>{{$category->name}}</p>
+                    <form action="{{route('category.destroy', $category->id)}}">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm('yakin menghapus')"></button>
+                    </form>
                     @endforeach
-                </tbody>
-            </table>
+               
           
       </div>
       <!-- /.modal-content -->

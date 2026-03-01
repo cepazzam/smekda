@@ -50,53 +50,5 @@ class CategoryController extends Controller
        
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Category $category)
-    {
-        $request->validate([
-            'name' => 'required|unique:categories,name,'.$category->id
-        ]);
-
-        $category = Category::findOrFail($category->id);
-        $category->update([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name, '-') 
-        ]);
-
-            return redirect()->route('category.index')->with('success', 'Data Berhasil Diupdate!');
-        
-    }
-
-
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy($id)
-    {
-        $category = Category::findOrFail($id);
-        $category->delete();
-
-     
-            return redirect()->route('category.index')->with(['success' => 'Data Berhasil Dihapus!']);
-        
-    }
+   
 }

@@ -19,15 +19,18 @@
              @foreach($posts as $post)
               <div class="col-md-2 px-2">
               <div class="card shadow-sm">
-             <span class="badge bg-info text-light d-block">{{$post->name}}</span>
+                <div class="d-flex justify-content-between">
+             <span class="badge bg-info text-light d-block mb-2">{{$post->category->name}}</span>
+            <span class="badge bg-warning text-light d-block mb-2">{{$post->position}}</span>
+                  </div>
             <img src="{{ asset('storage/'.$post->image)}}"  class="bd-placeholder-img card-img-top" height="120">
            
                   
-                  <p class="card-text p-2">
+                  <h6 class="card-text p-2">
                     {!!Str::limit($post->title, 50, ('...'))!!}
-                  </p> 
+                  </h6> 
                 
-                    <div class="btn-group w-50 mx-auto">
+          <div class="btn-group w-50 mx-auto mb-2">
             <a href="{{route('post.edit', $post->id)}}" class="btn btn-sm btn-success">
               <i class="fas fa-edit"></i>
             </a>
@@ -39,7 +42,6 @@
             </button>
             @include('admin.page.berita.destroy')
           </div>
-                    <small class="text-body-secondary">{{$post->created_at}}</small>
                 
                 </div>
               </div>

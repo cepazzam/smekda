@@ -1,20 +1,25 @@
 
-@section('css')
-<style>
+<div class="bg-green p-3 navbar-custom">
+  <div class="container d-flex justify-content-between align-items-center px-3">
+  <small class="text-light"><i class="fa fa-envelope"></i>  {{$skl->email}} - <i class="fa fa-phone"></i> {{$skl->telp_fax}}</small>
+  <div class="d-flex gap-3 ">
+     <a href="{{$skl->urlyt}}"><img src="{{asset('storage/'.$skl->logoyt)}}"  alt="" width="25"></a>
+     <a href="{{$skl->urlig}}" target="_blank"><img src="{{asset('storage/'.$skl->logoig)}}"  alt="" width="25"></a>
+     <a href="{{$skl->urltiktok}}" target="_blank"><img src="{{asset('storage/'.$skl->logotiktok)}}"  alt="" width="25"></a>
+     <a href="{{$skl->urlfb}}" target="_blank"><img src="{{asset('storage/'.$skl->logofb)}}"  alt="" width="25"></a>
 
+  </div>
+  </div>
 
-</style>
-
-@endsection
-
+</div>
      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-dark"
+        class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-warning border-2"
         aria-label="Offcanvas navbar large" style="z-index:99999"
       >
         <div class="container py-2">
           <div>
-            <img src="{{asset('storage/'.$skl->logo)}}" class="me-2" alt="smkn2 pwk" width="40">
-          <a class="navbar-brand fs-3 fw-bolder" href="#">{{$skl->nm_skl}}</a>
+            <img src="{{asset('storage/'.$skl->logo)}}" class="me-2" alt="smkn2 pwk" width="30">
+          <a class="navbar-brand fs-5 shadow" href="#">{{$skl->nm_skl}}</a>
           </div>
           <button
             class="navbar-toggler"
@@ -45,16 +50,16 @@
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav ms-auto pe-1">
-                <li class="nav-item mx-1 px-2">
-                  <a class="nav-link active" aria-current="page" href="{{route('home')}}"
+                <li class="nav-item mx-1 px-1">
+                  <a id="cep" class="nav-link btn btn-secondary btn-sm text-light" href="{{route('home')}}"
                     >Beranda</a
                   >
                 </li>
-                <li class="nav-item mx-1 px-2"><a class="nav-link active" href="#">Profil</a></li>
-                <li class="nav-item mx-1 px-2"><a class="nav-link active" href="#">Agenda</a></li>
-                <li class="nav-item dropdown mx-1 px-2">
-                  <a
-                    class="nav-link dropdown-toggle active"
+                <li class="nav-item mx-1 px-1"><a id="cep" class="nav-link btn btn-secondary btn-sm text-light" href="{{route('profil')}}">Profil</a></li>
+                <li class="nav-item mx-1 px-1"><a id="cep" class="nav-link btn btn-secondary btn-sm text-light" href="{{route('agenda')}}">Agenda</a></li>
+                <li class="nav-item dropdown mx-1 px-1">
+                  <a id="cep"
+                    class="nav-link dropdown-toggle btn btn-secondary btn-sm text-light"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -63,34 +68,61 @@
                     Konsentrasi Keahlian
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Manajemen Perkantoran</a></li>
+                    <li><a class="dropdown-item btn btn-light rounded" href="#">Manajemen Perkantoran</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">Akuntansi Keuangan</a>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Akuntansi Keuangan</a>
                     </li>
                     
                     <li>
-                      <a class="dropdown-item" href="#">Bisnis Digital</a>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Bisnis Digital</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Bisnis Ritel</a>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Bisnis Ritel</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Desain dan Produksi Busana</a>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Desain dan Produksi Busana</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Rekayasa Perangkat Lunak</a>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Rekayasa Perangkat Lunak</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Teknik Komputer dan Jaringan</a>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Teknik Komputer dan Jaringan</a>
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item bg-success rounded-2 shadows px-2 mx-1">
-                 <a href="" class="nav-link active">Panca Waluya</a>
+                <li class="nav-item dropdown mx-1 px-1">
+                  <a
+                    class="nav-link dropdown-toggle btn btn-secondary btn-sm text-light"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Pendidikan
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item btn btn-light rounded" href="#">Bidang Kurikulum</a></li>
+                    <li>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Bidang Kesiswaan</a>
+                    </li>
+                    
+                    <li>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Bidang Sarana Prasarana</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Bidang Hubinmas</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item btn btn-light rounded" href="#">Bidang Manajemen Mutu</a>
+                    </li>
+                    
+                  </ul>
                 </li>
-                <li class="nav-item bg-danger rounded-2 shadows px-2 mx-1">
-                 <a href="" class="nav-link active">SPMB 2026</a>
-                </li>
+                <li class="nav-item mx-1 px-1"><a id="cep" class="nav-link btn btn-secondary btn-sm text-light" href="#">Panca Waluya</a></li>
+                <li class="nav-item mx-1 px-1"><a id="cep" class="nav-link btn btn-secondary btn-sm text-light" href="#">SPMB 2026</a></li>
+
+
+                
               </ul>
              
             </div>
@@ -99,12 +131,16 @@
       </nav>
 
 @section('js')
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
-  
-   $(document).on('click','ul  li',function(){
-    $(this).addClass('bg-warning  rounded-2 shadows px-2').siblings().removeClass('bg-warning')
-  })
+  document.addEventListener("DOMContentLoaded", function() {
+    const currentUrl = window.location.href;
+    document.querySelectorAll('#cep').forEach(link => {
+        if (link.href === currentUrl) {
+            link.classList.add('bg-warning');
+        }
+    });
+});
 </script>
+ 
 
 @endsection

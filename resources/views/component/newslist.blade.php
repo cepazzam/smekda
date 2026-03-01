@@ -1,76 +1,26 @@
 <div class="mt-5">
-              <h4 class="text-primary">Berita Terbaru</h4>
+             <div class="d-flex justify-content-between align-items-center">
+              <h4 class="text-primary">Berita Terbaru </h4>
+              <a href=""> <span class="badge bg-dark shadow float-end">Lebih Banyak Berita</span></a>
+               </div>
               <ul class="list-unstyled">
+                @foreach ($newslist as $item)
+                    
+               
                 <li>
-                  <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                    href="#"
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                    href="{{route('read',$item->slug)}}"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="bd-placeholder-img"
-                      height="96"
-                      preserveAspectRatio="xMidYMid slice"
-                      width="100%"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="100%" height="100%" fill="#777"></rect>
-                    </svg>
+                   <img src="{{asset('storage/'.$item->image)}}" alt="{{$item->title}}" width="100" height="100">
                     <div class="col-lg-8">
-                      <h6 class="mb-0">Example blog post title</h6>
+                      <h6 class="mb-0">{{$item->title}}</h6>
                       <small class="text-body-secondary"
-                        >January 15, 2024</small
+                      
+                        >{{ Carbon\Carbon::parse($item->created_at)->locale('id')->diffForHumans()}}</small
                       >
                     </div>
                   </a>
                 </li>
-                <li>
-                  <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                    href="#"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="bd-placeholder-img"
-                      height="96"
-                      preserveAspectRatio="xMidYMid slice"
-                      width="100%"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="100%" height="100%" fill="#777"></rect>
-                    </svg>
-                    <div class="col-lg-8">
-                      <h6 class="mb-0">This is another blog post title</h6>
-                      <small class="text-body-secondary"
-                        >January 14, 2024</small
-                      >
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                    href="#"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="bd-placeholder-img"
-                      height="96"
-                      preserveAspectRatio="xMidYMid slice"
-                      width="100%"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="100%" height="100%" fill="#777"></rect>
-                    </svg>
-                    <div class="col-lg-8">
-                      <h6 class="mb-0">
-                        Longer blog post title: This one has multiple lines!
-                      </h6>
-                      <small class="text-body-secondary"
-                        >January 13, 2024</small
-                      >
-                    </div>
-                  </a>
-                </li>
+                 @endforeach
               </ul>
             </div>

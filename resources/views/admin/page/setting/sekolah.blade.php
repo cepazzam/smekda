@@ -87,15 +87,59 @@
             </div>
             <div class="col-md-3">
             <div class="form-group">
-            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-logo">update logo</button>
-             <img src="{{asset('storage/'.$skl->logo)}}" alt="" width="100">
+              <label for="judulBerita">Logo Sekolah</label>
+             <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logo">
+              <img src="{{asset('storage/'.$skl->logo)}}" alt="" width="20"> update logo sekolah
+             </button>
+             
+            </div>              
+            </div>
+            <div class="col-md-3">
+            <div class="form-group">
+              <label for="judulBerita">Logo Facebook</label>
+             <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logofb">
+            <img src="{{asset('storage/'.$skl->logofb)}}" alt="" width="20"> update logo facebook
+
+             </button>
+             
+            </div>              
+            </div>
+            <div class="col-md-3">
+            <div class="form-group">
+              <label for="judulBerita">Logo Tiktok</label>
+             <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logotiktok">
+            <img src="{{asset('storage/'.$skl->logotiktok)}}" alt="" width="20"> update logo tiktok
+
+             </button>
+             
+            </div>              
+            </div>
+            <div class="col-md-3">
+            <div class="form-group">
+              <label for="judulBerita">Logo Instagram</label>
+             <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logoig">
+            <img src="{{asset('storage/'.$skl->logoig)}}" alt="" width="20"> update logo instagram
+
+             </button>
+             
+            </div>              
+            </div>
+
+            <div class="col-md-3">
+            <div class="form-group">
+              <label for="judulBerita">Logo Youtube</label>
+             <button type="button" class="form-control" data-toggle="modal" data-target="#modal-logoyt">
+            <img src="{{asset('storage/'.$skl->logoyt)}}" alt="" width="20"> update logo youtube
+
+             </button>
+             
             </div>              
             </div>
 
             <div class="col-md-12">
             <div class="form-group">
               <label for="judulBerita">Tagline</label>
-          <input type="text" name="tagline" class="form-control" value="{{ $skl->tagline}}">
+            <input type="text" name="tagline" class="form-control" value="{{ $skl->tagline}}">
             </div>              
             </div>
 
@@ -115,6 +159,12 @@
   </div>
   
 @include('admin.page.setting.logo')
+@include('admin.page.setting.logofb')
+@include('admin.page.setting.logotiktok')
+@include('admin.page.setting.logoig')
+@include('admin.page.setting.logoyt')
+
+
 
 
 @endsection

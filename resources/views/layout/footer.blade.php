@@ -1,45 +1,58 @@
 <div class="b-example-divider"></div>
-    <div class="container">
-      <footer class="py-5">
+    <div class="container-fluid  border-warning border-3 shadow-lg">
+      <footer class="py-5 container">
         <div class="row">
-          <div class="col-6 col-md-4 mb-3">
-            <h5>   <img src="{{asset('storage/'.$skl->logo)}}" class="me-2" alt="smkn2 pwk" width="25">
- SMKN 2 PURWAKARTA</h5>
-            <ul style="list-style:none;">
+          <div class="col-12 col-md-5 mb-3">
+            
+            <ul style="list-style:none;line-height:35px">
+              <li class="d-flex w-75 gap-2 justify-content-center align-items-center rounded-pill bg-info text-light"> <img src="{{asset('storage/'.$skl->logo)}}" class="me-2" alt="smkn2 pwk" width="25" height="30"> <p class="fw-bold"> SMKN 2 PURWAKARTA</p></li>
+              
               <li> {{$skl->alamat}}</li>
               <li>Kode Pos :  {{$skl->pos}} - Telp/Fax :  {{$skl->telp_fax}}</li>
               <li>Email:  {{$skl->email}}</li>
               <li>Website :  {{$skl->website}}</li>
-              <li></li></ul> 
+              <li class="d-flex gap-3">
+                <a href="{{$skl->urlyt}}" target="_blank"><img src="{{asset('storage/'.$skl->logoyt)}}"  alt="" width="25"></a>
+                <a href="{{$skl->urlig}}" target="_blank"><img src="{{asset('storage/'.$skl->logoig)}}"  alt="" width="25"></a>
+                <a href="{{$skl->urltiktok}}" target="_blank"><img src="{{asset('storage/'.$skl->logotiktok)}}"  alt="" width="25"></a>
+                <a href="{{$skl->urlfb}}" target="_blank"><img src="{{asset('storage/'.$skl->logofb)}}"  alt="" width="25"></a>
+              </li>              
+            </ul> 
          
           </div>
-          <div class="col-6 col-md-4 mb-3">
+          <div class="col-12 col-md-3 mb-3">
             <h5>Konsentrasi Keahlian</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+                <a href="#" class="nav-link p-0 text-body-secondary list"><i class="fa fa-angle-double-right me-3"></i> Manajemen Perkantoran</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Features</a
+                <a href="#" class="nav-link p-0 text-body-secondary list"
+                  ><i class="fa fa-angle-double-right me-3"></i> Akuntansi Keuangan</a
                 >
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+                <a href="#" class="nav-link p-0 text-body-secondary list"><i class="fa fa-angle-double-right me-3"></i>  Bisnis Digital</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+                <a href="#" class="nav-link p-0 text-body-secondary list"><i class="fa fa-angle-double-right me-3"></i> Bisnis Ritel</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+                <a href="#" class="nav-link p-0 text-body-secondary list"><i class="fa fa-angle-double-right me-3"></i> Desain dan Produksi Busana</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary list"><i class="fa fa-angle-double-right me-3"></i> Rekayasa Perangkat Lunak</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary list"><i class="fa fa-angle-double-right me-3"></i> Teknik Komputer dan Jaringan</a>
               </li>
             </ul>
           </div>
           
           <div class="col-md-4 mb-3">
             <form>
-              <h5>Subscribe to our newsletter</h5>
-              <p>Monthly digest of what's new and exciting from us.</p>
+              <h5>Kirimkan email anda</h5>
+              <p>Ikuti informasi menarik lainnya dari kami</p>
               <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                 <label for="newsletter1" class="visually-hidden"
                   >Email address</label
@@ -50,7 +63,7 @@
                   class="form-control"
                   placeholder="Email address"
                 />
-                <button class="btn btn-primary" type="button">Subscribe</button>
+                <button class="btn btn-success" type="button">Subscribe</button>
               </div>
             </form>
           </div>
@@ -60,15 +73,9 @@
           <p>&copy; 2026 SMKN 2 Purwakarta. All rights reserved.</p>
           <ul class="list-unstyled d-flex">
             <li class="ms-3">
-              <a class="link-body-emphasis" href="#" aria-label="Instagram"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#instagram"></use></svg></a>
+              IT.Departement-SMKN 2 Purwakarta
             </li>
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#" aria-label="Facebook"
-                ><svg class="bi" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#facebook"></use></svg></a>
-            </li>
+            
           </ul>
         </div>
       </footer>

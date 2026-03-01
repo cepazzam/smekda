@@ -18,13 +18,22 @@
       @csrf
       <div class="card-body">
         <div class="row">
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-6">
           <label for="judulBerita">Judul</label>
           <input type="text" name="title" class="form-control" value="{{ old('title')}}">
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-3">
           <label for="judulBerita">Gambar</label>
           <input type="file" name="image" class="form-control">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="judulBerita">Text Position</label>
+          <select name="textpos" class="form-control" required>
+            <option value="" selected>-- Posisi Teks --</option>
+            <option value="text-start">Kiri</option>
+            <option value="text-center">Tengah</option>
+            <option value="text-end">Kanan</option>
+          </select>
         </div>
       </div>
         
